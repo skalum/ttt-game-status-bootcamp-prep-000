@@ -19,9 +19,9 @@ def won?(board)
     windex_1 = win_combination[0]
     windex_2 = win_combination[1]
     windex_3 = win_combination[2]
-    
+
     if position_taken?(board, windex_1) && board[windex_1] == board[windex_2] && board[windex_1] == board[windex_3]
-      [windex_1, windex_2, windex_3]
+      return [windex_1, windex_2, windex_3]
     end
   end
 
