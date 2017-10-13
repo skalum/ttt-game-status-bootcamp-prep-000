@@ -14,4 +14,16 @@ WIN_COMBINATIONS = [
   [2,4,6]  # Up diagonal
 ]
 
-def
+def won? (board)
+  WIN_COMBINATIONS.each do |win_combination|
+    windex_1 = win_combination[0]
+    windex_2 = win_combination[1]
+    windex_3 = win_combination[2]
+    
+    if position_taken?(board, windex_1) && board[windex_1] == board[windex_2] == board[windex_3]
+      [windex_1, windex_2, windex_3]
+    end
+  else
+    false
+  end
+end
