@@ -22,8 +22,8 @@ def won?(board)
     
     if position_taken?(board, windex_1) && board[windex_1] == board[windex_2] && board[windex_1] == board[windex_3]
       [windex_1, windex_2, windex_3]
+    else
+      false
     end
-  else
-    false
   end
 end
